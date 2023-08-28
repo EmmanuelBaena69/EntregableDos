@@ -7,8 +7,6 @@ const suma = (a,b) =>{
     
     return a + b;
 }
-console.log(suma(2,3));
-console.log(suma(10,10))
 
 console.log('*************************************************************')
 
@@ -19,8 +17,7 @@ const sonIguales = (x, y)=>{
   
     return x === y;
 }
-console.log(sonIguales(2,2));
-console.log(sonIguales(5,3));
+
 
 console.log('*************************************************************')
 
@@ -31,8 +28,6 @@ function tienenMismaLongitud(str1, str2) {
 
     return str1.lenght === str2.lenght;
   }
-  console.log(tienenMismaLongitud('hola', 'adios'));
-  console.log(tienenMismaLongitud('abc', 'defgh'));
 
   console.log('*************************************************************')
 
@@ -55,9 +50,6 @@ function tienenMismaLongitud(str1, str2) {
       return false
     }    
   }
-  console.log(esPositivo(5));
-  console.log(esPositivo(0));
-  console.log(esPositivo(-3));
 
   console.log('*************************************************************');
 
@@ -87,10 +79,7 @@ function tienenMismaLongitud(str1, str2) {
           return 'Color not found';
     }
   }
-  console.log(colors('Blue'));
-  console.log(colors('Red'));
-  console.log(colors('Green'));
-  console.log(colors('Orange'));
+  
   console.log('*************************************************************');
 
   const fizzBuzz = (numero)  => {
@@ -109,9 +98,6 @@ function tienenMismaLongitud(str1, str2) {
       return numero;
     }
   }
-  console.log(fizzBuzz(9));
-  console.log(fizzBuzz(10));
-  console.log(fizzBuzz(10));
 
   console.log('*************************************************************');
 
@@ -125,8 +111,6 @@ function tienenMismaLongitud(str1, str2) {
     return array[0];
   }
 
-  const miArray = [10,20,30,40];
-  console.log(devolverPrimerElemento(miArray));
   console.log('*************************************************************')
 
   const agregarItemAlFinalDelArray = (array, elemento) =>{
@@ -139,12 +123,6 @@ function tienenMismaLongitud(str1, str2) {
     array.push(elemento);
     return array;
   };
-
-  const miArreglo = [1,2,3];
-  const nuevo = 4;
-  const newArray = agregarItemAlFinalDelArray(miArreglo, nuevo);
-
-  console.log(newArray);
 
   console.log('*************************************************************')
 
@@ -163,8 +141,6 @@ function tienenMismaLongitud(str1, str2) {
     return usuario;
   }
 
-  const usuario1 = nuevoUsuario ('Emmanuel', 'emma34@email.com', '12345' );
-  console.log(usuario1);
   console.log('*************************************************************')
 
   const verificarPassword = (usuario, password) => {
@@ -175,14 +151,7 @@ function tienenMismaLongitud(str1, str2) {
 
     return usuario.password === password;
   };
-  const usuario = {
-    nombre:"Emma",
-    email:"emma90@email.com",
-    password:"12345"
-  };
 
-  console.log(verificarPassword(usuario, "12345"));
-  console.log(verificarPassword(usuario, "11111"));
   console.log('*************************************************************')
 
   const actualizarPassword =(usuario, nuevaPassword) => {
@@ -194,8 +163,6 @@ function tienenMismaLongitud(str1, str2) {
     return usuario;
   }
 
-  const usuarioUpdate = actualizarPassword(usuario, "contra");
-  console.log(usuarioUpdate);
   console.log('*************************************************************')
 
   const agregarAmigo = (usuario, nuevoAmigo) => {
@@ -211,14 +178,6 @@ function tienenMismaLongitud(str1, str2) {
    return usuario
   }
 
-  const amigos = {
-    nombre: "Mateo",
-    amigos: ["juan", "Alejandra"]
-  };
-
-  const nuevoAmigo = "Paulina";
-  const usuaNewFriend = agregarAmigo(amigos, nuevoAmigo);
-  console.log(usuaNewFriend);
   console.log('*************************************************************')
 
   const pasarUsuarioAPremium = usuarios => {
@@ -234,16 +193,6 @@ function tienenMismaLongitud(str1, str2) {
     return usuarios;
   }
 
-  const usuarios = [
-    { nombre: "Ana", esPremium: false },
-    { nombre: "Juan", esPremium: false },
-    { nombre: "María", esPremium: false }
-  ];
-  
-  const usuariosPremium = pasarUsuarioAPremium(usuarios);
-  console.log(JSON.stringify(usuariosPremium, null, 2)); 
-  //Profe tuve que añadir ese json.stringify porque el objeto estaba colapsando 
-  //busque la solucion en internet, salia asi  [{…}, {…}, {…}]
   console.log('*************************************************************')
 
   const sumarLikesDeUsuario = usuario => {
@@ -261,17 +210,6 @@ function tienenMismaLongitud(str1, str2) {
     return totalLikes;
   }
 
-  const usuarioo = {
-    nombre: "Ana",
-    posts: [
-      { titulo: "Mi primer post", likes: 8 },
-      { titulo: "Otro post", likes: 10 },
-      { titulo: "Último post", likes: 5 }
-    ]
-  }
-
-  const likesTotales = sumarLikesDeUsuario(usuarioo);
-  console.log(likesTotales); 
   console.log('*************************************************************')
 
 class Persona {
@@ -306,8 +244,6 @@ class Persona {
     }
 }
 
-const persona1 = new Persona("Juan", "Perez", 22, "Saavedra 123");
-console.log(persona1.detalle());
 console.log('*************************************************************')
 
 const crearInstanciaPersona = (nombre, apellido, edad, dir)=>{
@@ -318,8 +254,6 @@ const crearInstanciaPersona = (nombre, apellido, edad, dir)=>{
     return Persona2;
   };
 
-const personaNueva = crearInstanciaPersona("Paulina", "Duque", 20, "Lopez de mesa 32");
-console.log(personaNueva.detalle());
 console.log('*************************************************************')
 
 const sumarArray = (numeros, cb) =>{
@@ -331,13 +265,6 @@ const sumarArray = (numeros, cb) =>{
     cb(suma);
 };
 
-const Array = [1, 2, 3, 4, 5];
-
-const miFuncionCallback = resultado => {
-  console.log(`La suma es: ${resultado}`);
-};
-
-sumarArray(Array, miFuncionCallback);
 console.log('*************************************************************')
 
 const copiarEach = (array, cb) =>{
@@ -350,13 +277,7 @@ const copiarEach = (array, cb) =>{
     }
   }
 
-  const myArray = [1, 2, 3, 4, 5];
 
-  const functoinCallback = valor => {
-  console.log(`Valor: ${valor}`);
-  }
-
-  copiarEach(myArray, functoinCallback);
   console.log('*************************************************************')
 
   const operacionMatematica =(n1, n2, cb) =>{
@@ -367,10 +288,6 @@ const copiarEach = (array, cb) =>{
     return cb(n1, n2);
   }
 
-  const multiplicacion = (a,b) => a * b;
-
-  const resultadoMulti = operacionMatematica(5, 3, multiplicacion);
-  console.log(resultadoMulti);
   console.log('*************************************************************')
 
   function filter(array) {
@@ -382,9 +299,6 @@ const copiarEach = (array, cb) =>{
     return filtra;
   } 
 
-  const vector = ["apio", "banana", "uva", "aguacate", "pera"];
-  const resultadoFiltrado = filter(vector);
-  console.log(resultadoFiltrado);
   console.log('*************************************************************')
 
   /**
